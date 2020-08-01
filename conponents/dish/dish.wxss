@@ -1,0 +1,83 @@
+.dish{
+  display: flex;
+  margin-top: 30rpx;
+}
+.dish1{
+  justify-content: space-between;
+}
+.sheet{
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid rgb(198, 195, 195);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+.dish2{
+  margin-left: 30rpx;
+}
+.dish3{
+  height: 30rpx;
+  border: 1rpx solid #999;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.dish4{
+  margin-left: 10rpx;
+  color: rgb(184, 179, 179);
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.dish5{
+  color: rgb(184, 179, 179);
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.active{
+  color: #000;
+  z-index: 999;
+  font-weight: 700;
+}
+.picUrl{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.box{
+  display: flex;
+}
+.box1{
+  width: 1000rpx;
+}
+.box2{
+  margin-left: 30rpx;
+  width: 565rpx;
+  margin-top: 55rpx;
+  height: 100rpx;
+}
+.box3{
+  width: 210rpx;
+  margin-left: 50rpx;
+  font-size: 24rpx;
+}
+.box4{
+  width: 197rpx;
+  font-size: 24rpx;
+}
+.box5{
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  border: 1rpx solid rgb(199, 198, 198);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  width: 30rpx;
+  height: 26rpx;
+}

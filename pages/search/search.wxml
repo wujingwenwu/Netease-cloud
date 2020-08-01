@@ -1,0 +1,51 @@
+<view class="search">
+	<van-search value="{{ value }}" shape="round" bind:search="onSearch" bind:cancel="onCancel" background="white"
+   show-action bind:search="search" placeholder="请输入搜索关键词" bind:change="change" />
+</view>
+<view class="search3" wx:if="{{valuea !==''}}"><view class="search4" bindtap="value">搜索 "{{valuea}}"</view></view>
+<view wx:if="{{valuea !==''}}">
+ <view wx:for="{{allMatch}}" wx:key="index">
+ <view class="d-f m-t-20" bindtap="allMatch" data-item="{{item}}">
+ <image src="../../images/tabber/搜索.png" class="logo"></image>
+ <view class="m-l-10">{{item.keyword}}</view>
+</view>
+ </view>
+</view>
+<view  wx:if="{{valuea==''}}">
+<view wx:if="{{ass !==''}}">
+	<view class="d-f j-c-s-b">
+  
+		<view class="m-l-10">搜索历史</view>
+		<image src="../../images/tabber/垃圾箱.png" class="image" bindtap="image"></image>
+	</view>
+	<view class="d-f">
+		<scroll-view scroll-x="true" style="height: 100%;">
+			<view class="d-f">
+				<view id="demo1" wx:for="{{ass}}" wx:key="index">
+					<view class="value">
+						<view class="value1" bindtap="ass" data-item="{{item}}">{{item.value}}</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+</view>
+
+<view wx:if="{{valuea==''}}">
+<view class="m-t-10">热搜榜</view>
+<view class="searchs">
+	<view wx:for="{{asr}}" wx:key="index">
+		<view class="d-f searchs3 m-t-10">
+			<view class="searchs2 searchs4 {{index<4?'color':''}}" wx:if="index<5">{{index+1}}</view>
+			<view>
+				<view class="d-f m-l-10"bindtap="iconUrl" data-item="{{item}}"> 
+					<view class="searchs2">{{item.searchWord}}</view>
+					<image src="{{item.iconUrl}}" class="iconUrl m-l-10"></image>
+				</view>
+				<view class="searchs1 m-l-10">{{item.content}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+</view>

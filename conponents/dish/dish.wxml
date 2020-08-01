@@ -1,0 +1,86 @@
+<view class="dish dish1">
+<view class="dish dish2">
+<view  class="dish5 {{num===1?'active':''}}" bindtap="dish">新歌</view>
+<view class="dish3" ></view>
+<view  class="dish4 {{num===0?'active':''}}" bindtap="dishs">新碟</view>
+</view>
+<view class="sheet">查看更多</view>
+</view>
+<view wx:if="{{num===1}}">
+	<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+		<view class="box">
+			<view class="box1">
+				<view id="demo1" wx:for="{{dish}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.album.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.album.company}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+     <view class="box1">
+				<view id="demo1" wx:for="{{dish1}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.album.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.album.company}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view wx:if="{{num===0}}">
+<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+		<view class="box">
+			<view class="box1">
+				<view id="demo1" wx:for="{{dishs}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.artists[0].name}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+     <view class="box1">
+				<view id="demo1" wx:for="{{dishs1}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.artists[0].name}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

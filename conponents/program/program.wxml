@@ -1,0 +1,19 @@
+<view class="sheet1">
+	<view class="sheet2">推荐节目</view>
+	<view class="sheet">
+		播放全部
+	</view>
+</view>
+<view class="radio">
+	<scroll-view scroll-x="true" style="height: 100%;">
+		<view class="radio">
+			<view id="demo1" wx:for="{{program}}" wx:key="index">
+
+				<view class="radio2">
+					<image src="{{item.coverUrl}}" class="radio1"></image>
+					<view class="radio3">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

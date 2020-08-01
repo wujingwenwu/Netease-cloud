@@ -1,0 +1,21 @@
+.image{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 10rpx;
+}
+.rangking{
+  font-size: 26rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+ 
+  width: 225rpx;
+}
+.rangking1{
+  font-size: 26rpx;
+  color: rgb(181, 178, 178);
+}

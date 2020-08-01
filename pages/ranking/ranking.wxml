@@ -1,0 +1,72 @@
+<view class="m-l-10 f-w">榜单推荐</view>
+<view class="d-f m-t-10">
+	<view wx:for="{{rangking}}" wx:key="index">
+		<view class="m-l-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">官方榜</view>
+<view class="m-t-20">
+	<view wx:for="{{rangking1}}" wx:key="index">
+		<view class="m-l-10 d-f m-t-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="m-l-20 m-t-10">
+				<view wx:for="{{item.tracks}}" wx:key="index1" wx:for-item="item1" wx:for-index="index1">
+
+					<view class="d-f m-t-10 rangking1">
+						<view>{{index1+1}}.</view>
+						<view >{{item1.first}} -</view>
+						<view class="m-l-5">{{item1.second}} </view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">特色榜</view>
+<view class="d-f m-t-10">
+	<view wx:for="{{rangking2}}" wx:key="index">
+		<view class="m-l-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">全球榜</view>
+<view class="d-f m-t-10 f-w-w">
+	<view wx:for="{{rangking3}}" wx:key="index">
+		<view class="m-l-10 m-t-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">地区榜</view>
+<view class="d-f m-t-10">
+	<view wx:for="{{rangking4}}" wx:key="index">
+		<view class="m-l-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">曲风榜</view>
+<view class="d-f m-t-10 f-w-w">
+	<view wx:for="{{rangking5}}" wx:key="index">
+		<view class="m-l-10 m-t-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>
+<view class="m-l-10 f-w m-t-20">更多榜单</view>
+<view class="d-f m-t-10 f-w-w">
+	<view wx:for="{{rangking6}}" wx:key="index">
+		<view class="m-l-10 m-t-10">
+			<image src="{{item.coverImgUrl}}" class="image"></image>
+			<view class="rangking">{{item.name}}</view>
+		</view>
+	</view>
+</view>

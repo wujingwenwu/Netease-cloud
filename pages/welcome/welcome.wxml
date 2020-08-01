@@ -1,0 +1,5 @@
+<view class="welcome">音乐的力量</view>
+<view class="d-f welcome1">
+<image src="../../images/tabber/网易云音乐.png" class="welcome2"></image>
+<view class="welcome3">网易云</view>
+</view>

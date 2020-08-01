@@ -1,0 +1,60 @@
+.sheet{
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid rgb(198, 195, 195);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+.sheet1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  
+}
+.sheet2{
+  margin-left: 30rpx;
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.image{
+  width: 220rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+  
+}
+
+.sheet3{
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-left: 20rpx; 
+  width: 220rpx;
+}
+.sheet5{
+ flex-wrap: wrap;
+  display: flex;
+  margin-top: 20rpx;
+  position: relative;
+ 
+}
+.sheet6{
+  display: flex;
+ position: absolute;
+ margin-left: 140rpx;
+ margin-top: 10rpx;
+ color: white;
+ font-size: 24rpx;
+}
+.sheet7{
+  width: 35rpx;
+  height: 35rpx;
+}

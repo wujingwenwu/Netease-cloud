@@ -1,0 +1,64 @@
+.search{
+  margin-top: 105rpx;
+}
+.search3{
+  width: 100%;
+  height: 50rpx;
+  border-bottom: 1rpx solid rgb(184, 182, 182);
+  color: rgb(31, 31, 223);
+}
+.image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-top: 5rpx;
+  margin-right: 20rpx;
+  
+}
+.value{
+  border-radius: 20rpx;
+  background: rgb(233, 230, 230);
+  font-size: 26rpx;
+  width: 150rpx;
+  word-break:keep-all;/* 不换行 */
+ 
+   overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+  
+  margin-left: 10rpx;
+  padding: 5rpx 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.value1{
+  padding: 5rpx 5rpx;
+  margin-left: 10rpx;
+}
+.values{
+  width: 4000rpx;
+}
+.iconUrl{
+  width: 35rpx;
+  height: 35rpx;
+}
+.searchs{
+  flex-wrap: wrap;
+}
+.searchs1{
+  font-size: 26rpx;
+  color: rgb(167, 164, 164);
+}
+.searchs2{
+  font-size: 30rpx;
+
+}
+.searchs4{
+  margin-top: 10rpx;
+}
+.color{
+  color: red;
+}
+.logo{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 5rpx;
+}

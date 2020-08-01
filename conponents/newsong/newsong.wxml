@@ -1,0 +1,65 @@
+<view class="sheet1">
+	<view class="sheet2">听过最爱的华语歌曲</view>
+	<view class="sheet">
+		<image src="../../images/tabber/播放.png" class="png"></image>播放全部
+	</view>
+</view>
+<view>
+	<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+		<view class="box">
+			<view class="box1">
+				<view id="demo1" wx:for="{{newsong}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.song.artists[0].name}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo" bindtap="newsong" data-item="{{item}}"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+     <view class="box1">
+				<view id="demo1" wx:for="{{newsong1}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.song.artists[0].name}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+      <view class="box1">
+				<view id="demo1" wx:for="{{newsong2}}" wx:key="index">
+					<view class="box">
+						<image src="{{item.picUrl}}" class="picUrl"></image>
+						<view class="box box2">
+							<view class="box4">{{item.name}}</view>
+							<view class="box3">{{item.song.artists[0].name}}</view>
+							<view class="box5">
+								<view>
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+		</view>
+	</scroll-view>
+
+</view>

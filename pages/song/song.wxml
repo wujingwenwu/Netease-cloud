@@ -1,0 +1,73 @@
+<view class="d-f paylist">
+	<van-tabs active="{{active}}" >
+		<van-tab title="推荐">
+
+			<view class='top'>
+				<swiper class='swiperClass' indicator-dots='{{false}}' style='height:784rpx;width:100%' circular previous-margin="140rpx" next-margin="140rpx" bindchange="bindchange" autoplay="{{autoplay}}" current='{{swiperCurrent}}'>
+					<block wx:for="{{song}}" wx:key="index">
+						<swiper-item>
+							<image src="{{item.coverImgUrl}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+								<view class="songs" mode='aspectFill'>
+									<view>{{item.name}}</view>
+								</view>
+								<view class="logo1">
+									<image src="../../images/tabber/播放 (1).png" class="logo"></image>
+								</view>
+								<view class="d-f logo2">
+									<image class="logo" src="../../images/tabber/播放2.png"></image>{{item.playCount}}
+								</view>
+							</image>
+
+						</swiper-item>
+
+					</block>
+				</swiper>
+			</view>
+			<view class="d-f son">
+				<view wx:for="{{songs}}" wx:key="index">
+					<view class="d-f logos3">
+						<image src="../../images/tabber/播放2.png" class="logo"></image>{{item.playCount}}
+					</view>
+					<view class="logos1">
+						<image src="{{item.coverImgUrl}}" class="logos"></image>
+						<view class="logos2">{{item.name}}</view>
+					</view>
+				</view>
+       <view class="indexa">人家也是有底线的呢!</view>
+			</view>
+		</van-tab>
+		<van-tab title="官方">
+    	<view class="d-f son">
+				<view wx:for="{{playlists1}}" wx:key="index">
+					<view class="d-f logos3">
+						<image src="../../images/tabber/播放2.png" class="logo"></image>{{item.playCount}}
+					</view>
+					<view class="logos1">
+						<image src="{{item.coverImgUrl}}" class="logos"></image>
+						<view class="logos2">{{item.name}}</view>
+					</view>
+				</view>
+       <view class="indexa">人家也是有底线的呢!</view>
+			</view>
+    
+    
+    </van-tab>
+		<van-tab title="精品">
+    	<view class="d-f son">
+				<view wx:for="{{playlists}}" wx:key="index">
+					<view class="d-f logos3">
+						<image src="../../images/tabber/播放2.png" class="logo"></image>{{item.playCount}}
+					</view>
+					<view class="logos1">
+						<image src="{{item.coverImgUrl}}" class="logos"></image>
+						<view class="logos2">{{item.name}}</view>
+					</view>
+				</view>
+       <view class="indexa">人家也是有底线的呢!</view>
+			</view>
+    
+    </van-tab>
+
+
+	</van-tabs>
+</view>

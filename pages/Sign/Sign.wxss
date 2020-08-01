@@ -1,0 +1,26 @@
+.sign{
+  width: 100%;
+  height: 100rpx;
+  background: red;
+  color: white;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign1{
+  width: 172rpx;
+  border: 4rpx solid red;
+}
+.sign2{
+  font-size: 36rpx;
+}
+.sign3{
+  width: 136rpx;
+  border: 4rpx solid red;
+}
+.danger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

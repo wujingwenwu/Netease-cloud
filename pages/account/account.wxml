@@ -1,0 +1,39 @@
+<view class="d-f account">
+	<view class=" d-f" wx:if="{{$.userId !==''}}"  >
+		<image src="../../images/tabber/QQ图片20200720154723.jpg" class="image"></image>
+		<view class="m-l-10 account1">
+			<view>{{user.nickname}}</view>
+			<view>Lv:{{user.createDays}}</view>
+		</view>
+	</view>
+	<view wx:else class=" d-f">
+		<image src="../../images/tabber/ba827f54c915afce157d189a9d4a4948.jpeg" class="image"></image>
+		<view class="m-l-10 account1">
+			<view bindtap="sigon">请登录</view>
+			<view>Lv:0</view>
+		</view>
+	</view>
+	<view class="account2" bindtap="qian">签到</view>
+</view>
+<view class="d-f j-c-s-a m-t-20">
+	<view>
+		<view class="m-l-10">0</view>
+		<view>动态</view>
+	</view>
+	<view>
+		<view class="m-l-10">0</view>
+		<view>关注</view>
+	</view>
+	<view>
+		<view class="m-l-10">0</view>
+		<view>粉丝</view>
+	</view>
+	<view>
+		<image src="../../images/tabber/编写.png" class="image1 m-l-10"></image>
+		<view bindtap="edit">编辑资料</view>
+	</view>
+</view>
+<view class="button">
+	<van-button type="primary" size="normal" bindtap="button" wx:if="{{$.userId !==''}}">退出登录</van-button>
+	<van-button type="primary" size="normal" bindtap="sigon" wx:else>登录</van-button>
+</view>

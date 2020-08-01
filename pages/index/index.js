@@ -1,54 +1,169 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
+const { default: api } = require("../../http/api")
 Page({
+
+  /**
+   * 页面的初始数据
+   */
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    banners:[],
+    result:[],
+    newsong:[],
+    newsong1:[],
+    newsong2:[],
+    radio:[],
+    dish:[],
+    dishs:[],
+    dishs1:[],
+    program:[],
+   
   },
-  //事件处理函数
-  bindViewTap: function() {
+  //每日推荐
+  recommend(){
+    wx.showToast({
+      title: '抱歉，此功能正在开发中!',
+      icon: 'none',
+      duration: 2000
+    })
+  },
+   //歌单
+   sheet(){
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../song/song',
     })
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
+  //排行榜
+  ranking(){
+    wx.navigateTo({
+      url: '../ranking/ranking',
+    })
+  },
+  //搜索
+  onSearch(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    //轮播图
+    api.banner().then(res=>{
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        banners:res.banners
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
+    }).catch(err=>{
+
+    });
+    //发现好歌单
+    api.personalized().then(res=>{
+      
+      res.result.map(item=>{
+        item.playCount=parseInt(item.playCount/10000)+'万'
       })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        result:res.result.slice(0,6)
+      })
+      
+  
+    }).catch(err=>{
+    });
+    //推荐新音乐
+    api.newsong().then(res=>{
+      this.setData({
+        newsong:res.result.slice(0,3),
+        newsong1:res.result.slice(3,6),
+        newsong2:res.result.slice(6,9)
+      })
+    }).catch(err=>{
+      console.log(err)
+    });
+    //推荐电台
+    api.djprogram().then(res=>{
+       this.setData({
+         radio:res.result
+       })
+   
+    }).catch(err=>{
+      console.log(err)
+    });
+    //新歌速递
+    api.song().then(res=>{
+      this.setData({
+        dish:res.data.slice(0,3),
+        dish1:res.data.slice(3,6)
+      })
+     
+   }).catch(err=>{
+     console.log(err)
+   });
+   //新碟上架
+   api.album().then(res=>{
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      dishs:res.albums.slice(0,3),
+      dishs1:res.albums.slice(3,6)
     })
+ }).catch(err=>{
+   console.log(err)
+ });
+    //推荐节目
+    api.program().then(res=>{
+      this.setData({
+        program:res.programs
+        
+      })
+      console.log(this.data.program)
+   }).catch(err=>{
+     console.log(err)
+   });
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+    
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+    
   }
 })

@@ -1,3 +1,10 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-search": "../../lib/vant/search/index",
+    "sheet":"../../conponents/sheet/sheet",
+    "newsong":"../../conponents/newsong/newsong",
+    "dish":"../../conponents/dish/dish",
+    "radios":"../../conponents/radios/radios",
+    "program":"../../conponents/program/program"
+  }
 }

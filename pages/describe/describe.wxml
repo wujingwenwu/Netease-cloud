@@ -1,0 +1,103 @@
+<image src="{{hotSongs.picUrl}}" class="describe"></image>
+<view class="describe1">
+	<view class="describe2">{{hotSongs.name}}</view>
+	<view class="describe3">入驻艺人</view>
+	<view class="d-f describe6">
+		<view class="describe4">+ 关注</view>
+		<view class="describe5">
+			<image src="../../images/tabber/信息 短信 消息 提醒 邮件 私信 邮箱.png" class="image"></image>发消息
+		</view>
+	</view>
+</view>
+<view class="descr">
+	<view class="descr1 d-f">
+		<view wx:for="{{list}}" wx:key="index">
+			<view class="descr2 {{indexq==index?'color':''}}" data-index="{{index}}" bindtap="list">{{item.name}}</view>
+			<view class="descr3 {{indexq==index?'background':''}}"></view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexq==0}}">
+	<view class="d-f m-t-20">
+		<view class="d-f">
+			<image src="../../images/tabber/播放3.png" class="list1 m-l-10"></image>
+			<view class="m-l-10">近期热门</view>
+		</view>
+		<view class="list2">更多热歌</view>
+	</view>
+  <view wx:for="{{hotSongss}}" wx:key="index" class="m-t-20">
+  <view class="d-f m-t-10 m-l-10" bindtap="hotSongss" data-item="{{item}}">
+  <view>
+  <view>{{item.name}}</view>
+  <view class="m-t-10 list5">{{item.ar[0].name}}</view>
+  </view>
+  <view class="d-f list4">
+  <image src="../../images/tabber/视频播放.png" class="list3"></image>
+  <image src="../../images/tabber/省略号.png" class="list3 m-l-10"></image>
+  </view>
+  </view>
+  </view>
+  <view class="m-t-20">
+  <view class="d-f">
+  <view class="m-l-10">基本信息</view>
+  <view class="list2">更多信息</view>
+  </view>
+  <view class="m-t-20 m-l-10">昵称:{{hotSongs.name}}</view>
+  <view class="m-t-10 m-l-10 list6">简介:{{hotSongs.briefDesc}}</view>
+  </view>
+</view>
+<view wx:if="{{indexq==1}}">
+	<view class="d-f m-t-20">
+		<view class="d-f">
+			<image src="../../images/tabber/文件添加.png" class="list1 m-l-10"></image>
+			<view class="m-l-10">收藏热门</view>
+		</view>
+		<view class="list2">管理</view>
+	</view>
+  <view wx:for="{{arr}}" wx:key="index" class="m-t-20">
+  <view class="d-f m-t-10 m-l-10" bindtap="hotSongss" data-item="{{item}}">
+	<view>{{index+1}}</view>
+  <view class="m-l-10">
+  <view class="lise">{{item.name}}</view>
+  <view class="m-t-10 list5">{{item.al.name}}</view>
+  </view>
+  <view class="d-f list4">
+  <image src="../../images/tabber/视频播放.png" class="list3"></image>
+  <image src="../../images/tabber/省略号.png" class="list3 m-l-10"></image>
+  </view>
+  </view>
+  </view>
+</view>
+<view wx:if="{{indexq==2}}">
+<view class="d-f m-t-20 hotAlbums1">
+<view class="m-l-10">按发行时间排序</view>
+<view class="hotAlbums2">排序</view>
+</view>
+<view class="m-t-10 m-l-10" wx:for="{{hotAlbums}}" wx:key="index">
+<view class="d-f">
+<image src="{{item.blurPicUrl}}" class="hotAlbums"></image>
+<view class="m-l-10 m-t-10">
+<view>{{item.name}}</view>
+<view class="d-f hotAlbums3">
+<view>{{item.publishTime}}</view>
+<view class="m-l-10">{{item.size}}首</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+<view wx:if="{{indexq==3}}">
+<view class="d-f m-t-10 hotAlbums1">
+<view class="m-l-10">全部</view>
+<view class="hotAlbums2">mv</view>
+</view>
+<view wx:for="{{mvs}}" wx:key="index">
+<view class="d-f m-t-10 m-l-10">
+<image src="{{item.imgurl}}" class="mvs"></image>
+<view>
+<view class="mvs1">{{item.name}}</view>
+<view class="mvs2">{{item.publishTime}}</view>
+</view>
+</view>
+</view>
+</view>

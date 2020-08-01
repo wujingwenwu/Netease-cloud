@@ -1,0 +1,347 @@
+.detail {
+  margin-top: 100rpx;
+}
+
+.value {
+  width: 120rpx;
+  margin-left: 20rpx;
+}
+
+.color {
+  color: red;
+}
+
+.background {
+  background: red;
+  width: 70rpx;
+  height: 6rpx;
+  margin-left: -2rpx;
+  margin-top: 4rpx;
+}
+
+.sheet {
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid rgb(198, 195, 195);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+
+.sheet1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+
+}
+
+.sheet2 {
+  margin-left: 30rpx;
+  font-weight: 700;
+  font-size: 32rpx;
+}
+
+.detail1 {
+  width: 390rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail2 {
+  font-size: 28rpx;
+  color: rgb(170, 170, 170);
+}
+
+.detail3 {
+  width: 100%;
+  border: 1rpx solid rgb(230, 226, 226);
+}
+
+.logo {
+  width: 45rpx;
+  height: 40rpx;
+}
+
+.logo1 {
+  margin-left: 250rpx;
+  margin-top: 20rpx;
+}
+
+.logo2 {
+  margin-left: 295rpx;
+  margin-top: 20rpx;
+}
+
+.detail4 {
+  display: flex;
+  justify-content: center;
+  color: rgb(194, 193, 193);
+  margin-top: 20rpx;
+}
+
+.images {
+  width: 200rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+}
+
+.count {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.count1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+ width: 500rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.video{
+  width: 220rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+.video1{
+  width: 500rpx;
+}
+.video2{
+  color: #999;
+  font-size: 26rpx;
+}
+.mlog{
+  width: 300rpx;
+  height: 350rpx;
+}
+.tabber{
+  width: 30rpx;
+  height: 30rpx;
+}
+.tabber1{
+  position: absolute;
+  font-size: 26rpx;
+  color: white;
+  left: 102rpx;
+  margin-top: 10rpx;
+}
+.talk{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.talk1{
+  font-size: 26rpx;
+  color: #999;
+}
+.talk2{
+ position: absolute;
+ right: 10rpx;
+}
+.artist{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  margin-left: 10rpx;
+  
+}
+.artist1{
+  width: 30rpx;
+  height: 30rpx;
+}
+.artist2{
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  margin-top: 5rpx;
+}
+.artist3{
+  position: absolute;
+  right: 20rpx;
+  font-size: 26rpx;
+}
+.album{
+  width: 200rpx;
+  height: 200rpx;
+}
+.album1{
+  
+  text-overflow: ellipsis;
+ width: 500rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.album2{
+  font-size: 26rpx;
+  color: #999;
+}
+.user{
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+}
+.user1{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 5rpx;
+}
+.user2{
+  font-size: 26rpx;
+}
+.user3{
+  width: 130rpx;
+  height: 48rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  position: absolute;
+  right: 20rpx;
+  margin-top: 30rpx;
+}
+.user4{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+}
+.single{
+  width: 45rpx;
+  height: 45rpx;
+}
+.single1{
+  position: absolute;
+  right: 60rpx;
+}
+.single2{
+  position: absolute;
+  right: 10rpx;
+}
+.single3{
+  width: 100%;
+  border: 1rpx solid rgb(238, 237, 237);
+}
+.single4{
+  color: rgb(0, 174, 255);
+}
+.single5{
+  text-overflow:ellipsis;
+  overflow:hidden;
+white-space:nowrap;
+ width: 375rpx;
+
+}
+.single6{
+font-size: 26rpx;
+color: #999;
+}
+.playLists{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.playLists1{
+  font-size: 26rpx;
+color: #999;
+}
+.playLists2{
+  text-overflow:ellipsis;
+  overflow:hidden;
+white-space:nowrap;
+ width: 530rpx;
+}
+.artists{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.artists1{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+}
+.albums{
+  width: 140rpx;
+  height: 140rpx;
+}
+.albums1{
+  font-size: 26rpx;
+  color: #999;
+}
+.videos{
+  width: 270rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.videos1{
+  font-size: 26rpx;
+  color: #999;
+}
+.videos2{
+  position: absolute;
+  font-size: 26rpx;
+  color: white;
+  left: 160rpx;
+  margin-top: 10rpx;
+}
+.songa{
+  font-size: 26rpx;
+  color: #999;
+}
+.songa1{
+  position: absolute;
+  right: 30rpx;
+}
+.songa2{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.songa3{
+  width: 200rpx;
+}
+.djRadios{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.djRadios1{
+  text-overflow:ellipsis;
+  overflow:hidden;
+white-space:nowrap;
+ width: 530rpx;
+}
+.userprofiles{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.userprofiles1{
+  width: 30rpx;
+  height: 30rpx;
+
+}
+.userprofiles2{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+.userprofiles3{
+  font-size: 28rpx;
+  color: rgb(138, 138, 138);
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+
+}
+.userprofiles4{
+  text-overflow:ellipsis;
+  overflow:hidden;
+white-space:nowrap;
+width: 400rpx;
+}

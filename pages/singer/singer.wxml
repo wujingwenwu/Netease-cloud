@@ -1,0 +1,39 @@
+<view>
+
+	<scroll-view scroll-x="true" style="height: 100%;">
+		<view class="d-f">
+			<view id="demo1" wx:for="{{singerlist}}" wx:key="index">
+				<view class="value">
+					<view class="value1 {{indexs==index?'color':''}}" bindtap="name" data-index="{{index}}" data-item="{{item}}">{{item.name}}</view>
+					<view class="value2  {{indexs==index?'background':''}}"></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view class="m-t-20" wx:if="{{indexs !==0}}">
+	<scroll-view scroll-x="true" style="height: 100%;">
+		<view class="d-f">
+			<view id="demo1" wx:for="{{zimu}}" wx:key="index">
+				<view class="zimu">
+					<view class="singer {{indexa==index?'backgrounds':''}}" bindtap="zimu" data-index="{{index}}" data-item="{{item}}">{{item.name}}</view>
+
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view class="m-t-20" >
+	<view wx:for="{{artists}}" wx:key="index">
+		<view class="d-f m-t-20 m-l-10" bindtap="artists" data-item="{{item}}">
+			<image src="{{item.picUrl}}" class="artists"></image>
+			<view class="d-f m-t-20">
+				<view class="m-l-10">{{item.name}}</view>
+				<view class="artist2" wx:if="{{item.accountId !==undefined}}">
+					<image src="../../images/tabber/个人中心 我的  人物 标准头 线性.png" class="artist1"></image>
+				</view>
+			</view>
+   <view class="user3">+ 关注</view>
+		</view>
+	</view>
+</view>

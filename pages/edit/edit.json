@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field/index",
+    "van-swipe-cell": "../../lib/vant/swipe-cell/index",
+    "van-action-sheet": "../../lib/vant/action-sheet/index",
+    "van-cell": "../../lib/vant/cell/index",
+    "van-dialog": "../../lib/vant/dialog/index",
+    "van-picker": "../../lib/vant/picker",
+    "van-popup": "../../lib/vant/popup",
+    "van-datetime-picker": "../../lib/vant/datetime-picker",
+    "van-area": "../../lib/vant/area"
+  },
+  "navigationBarTitleText": "编辑个人资料"
+}

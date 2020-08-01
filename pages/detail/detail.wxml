@@ -1,0 +1,282 @@
+<view class="detail">
+	<van-search value="{{ value }}" shape="round" bind:clear="focus" background="white" placeholder="请输入搜索关键词" />
+</view>
+
+<view class="d-f">
+	<scroll-view scroll-x="true" style="height: 100%;">
+		<view class="d-f">
+			<view id="demo1" wx:for="{{list}}" wx:key="index">
+				<view class="value">
+					<view class="value1 {{indexs==index?'color':''}}" bindtap="name" data-index="{{index}}">{{item.name}}</view>
+					<view class="value2  {{indexs==index?'background':''}}"></view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+<view wx:if="{{indexs==0}}">
+	<view class="sheet1">
+		<view class="sheet2">单曲</view>
+		<view class="sheet">播放全部</view>
+	</view>
+	<view>
+		<view class="detail3 m-t-10"></view>
+		<view wx:for="{{song.songs}}" wx:key="index">
+			<view class="d-f m-t-10" bindtap="songsq" data-item="{{item}}">
+				<view class="m-l-10 " >
+					<view>{{item.name}}</view>
+					<view class="d-f detail1 m-t-10"  >
+						<view class="detail2">{{item.ar[0].name}}-</view>
+						<view class="detail2 m-l-10">{{item.al.name}}</view>
+					</view>
+				</view>
+				<view class="d-f  logo1" wx:if="{{index<3}}">
+					<image src="../../images/tabber/视频播放.png" class="logo"></image>
+					<image src="../../images/tabber/省略号.png" class="logo"></image>
+				</view>
+				<view wx:if="{{index>2}}">
+					<image src="../../images/tabber/省略号.png" class="logo logo2"></image>
+				</view>
+			</view>
+			<view class="detail3 m-t-10"></view>
+
+		</view>
+		<view class="detail4" bindtap="song">{{song.moreText}}></view>
+	</view>
+	<view class="sheet2 m-t-20">歌单</view>
+	<view class="m-t-20" wx:for="{{playList.playLists}}" wx:key="index">
+		<view class="d-f">
+			<image src="{{item.coverImgUrl}}" class="images"></image>
+			<view class="m-l-10 m-t-20">
+				<view class="count1">{{item.name}}</view>
+				<view class="count m-t-10">{{item.trackCount}}首音乐 by{{item.creator.nickname}},播放{{item.playCount}}次</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="detail4" bindtap="playList">{{playList.moreText}} ></view>
+	<view class="sheet2 m-t-20">视频</view>
+	<view>
+		<view wx:for="{{video.videos}}" wx:key="index">
+			<view class="d-f tabber1">
+				<image src="../../images/tabber/播放2.png" class="tabber"></image>
+				<view>{{item.playTime}}</view>
+			</view>
+			<view class="d-f m-t-10">
+				<image src="{{item.coverUrl}}" class="video"></image>
+				<view class="video1 m-l-10">
+					<view>{{item.title}}</view>
+					<view class="d-f m-t-10 video2">
+						<view>{{item.durationms}}</view>
+						<view>{{item.creator[0].userName}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="detail4">{{video.moreText}} ></view>
+	</view>
+
+	<view class="sheet2 m-t-20">主题</view>
+	<view>
+		<view wx:for="{{talk.talks}}" wx:key="index">
+			<view class="d-f m-t-10 m-l-10">
+				<image src="{{item.shareCover.url}}" class="talk"></image>
+				<view class="m-l-10">
+					<view># {{item. talkName}}</view>
+					<view class="d-f m-t-10 talk1">
+						<view>{{item.follows}}人关注</view>
+						<view class="m-l-40">{{item.mlogCount}}人参与</view>
+					</view>
+				</view>
+				<view class="talk2">></view>
+			</view>
+		</view>
+		<view class="detail4">{{talk.moreText}} ></view>
+	</view>
+	<view class="sheet2 m-t-20">歌手</view>
+	<view>
+		<view wx:for="{{artist.artists}}" wx:key="index">
+			<view class="d-f m-t-10">
+				<image src="{{item.img1v1Url}}" class="artist"></image>
+				<view class="m-l-10">{{item.name}}</view>
+				<view class="d-f artist3">
+					<view class="artist2">
+						<image src="../../images/tabber/个人中心 我的  人物 标准头 线性.png" class="artist1"></image>
+					</view>
+					已入驻
+				</view>
+			</view>
+		</view>
+		<view class="detail4" bindtap="artist">{{artist.moreText}} ></view>
+	</view>
+	<view class="sheet2 m-t-20">专辑</view>
+	<view>
+		<view wx:for="{{album.albums}}" wx:key="index">
+			<view class="d-f m-t-10 m-l-10">
+				<image src="{{item.picUrl}}" class="album"></image>
+				<view class="m-l-10 m-t-10">
+					<view class="album1">{{item.name}}</view>
+					<view class="d-f album2 m-t-10">
+						<view>{{item.artist.name}}</view>
+						<view>{{item.publishTime}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="detail4" bindtap="album">{{album.moreText}} ></view>
+	</view>
+	<view class="sheet2 m-t-20">用户</view>
+	<view>
+		<view wx:for="{{user.users}}" wx:key="index">
+			<view class="d-f m-t-20">
+				<image src="{{item.avatarUrl}}" class="user"></image>
+				<view class="m-t-10 m-l-10">
+					<view>{{item.nickname}}
+						<image src="../../images/tabber/女生.png" class="user1"></image>
+					</view>
+					<view class="m-t-10 user2">{{item.signature}}</view>
+				</view>
+				<view class="user3">+ 关注</view>
+			</view>
+		</view>
+		<view class="detail4" bindtap="user">{{user.moreText}} ></view>
+	</view>
+	<view class="user4">人家也是有底线的!</view>
+</view>
+<!-- 单曲 -->
+<view wx:if="{{indexs==1}}">
+	<view class="d-f m-l-10 m-t-10">
+		<image src="../../images/tabber/播放3.png" class="single"></image>
+		<view class="m-l-10">播放全部</view>
+	</view>
+	<view wx:for="{{songs}}" wx:key="index" class="m-t-20">
+		<view class="d-f m-l-10">
+			<view>
+				<view class="single4">{{item.name}}</view>
+				<view class="d-f m-t-10 single6">
+					<view>{{item.artists[0].name}}-</view>
+					<view class="single5">{{item.album.name}}</view>
+				</view>
+			</view>
+			<image src="../../images/tabber/播放3.png" class="single single1"></image>
+			<image src="../../images/tabber/省略号.png" class="single single2"></image>
+		</view>
+		<view class="single3 m-t-10"></view>
+	</view>
+</view>
+<!-- 歌单 -->
+<view wx:if="{{indexs==2}}">
+	<view wx:for="{{playLists}}" wx:key="index" class="m-t-10">
+		<view class="d-f m-l-10">
+			<image src="{{item.coverImgUrl}}" class="playLists"></image>
+			<view class="m-l-10">
+				<view class="playLists2">{{item.name}}</view>
+				<view class="playLists1 m-t-10">{{item.trackCount}}首音乐 by {{item.creator.nickname}},播放{{item.playCount}}次</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexs==3}}">
+	<view wx:for="{{artists}}" wx:key="index">
+		<view class="d-f m-l-10 m-t-10">
+			<image src="{{item.img1v1Url}}" class="artists"></image>
+			<view class="d-f artists1">{{item.name}}
+				<view wx:if="{{item.alia.length==0}}"></view>
+				<view wx:if="{{item.alias.length !==0}}">({{item.alias[0]}})</view>
+			</view>
+			<view wx:if="{{item.accountId ==undefined}}"></view>
+			<view wx:if="{{item.accountId !==undefined}}" class="d-f artist3">
+				<view class="artist2">
+					<image src="../../images/tabber/个人中心 我的  人物 标准头 线性.png" class="artist1"></image>
+				</view>
+				已入驻
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexs==4}}">
+	<view wx:for="{{albums}}" wx:key="index" class="m-t-10">
+		<view class="d-f m-t-10 m-l-10">
+			<image src="{{item.picUrl}}" class="albums"></image>
+			<view class="m-t-10 m-l-10">
+				<view>{{item.name}}</view>
+				<view class="d-f m-t-10 albums1">
+					<view>{{item.artist.name}}</view>
+					<view wx:if="{{item.containedSong !==''}}" class="m-l-10">包含单曲:{{item.containedSong}}</view>
+					<view wx:if="{{item.containedSong ==''}}" class="m-l-10">{{item.publishTime}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexs==5}}">
+	<view wx:for="{{videos}}" wx:key="index">
+		<view class="d-f videos2" >
+			<image src="../../images/tabber/播放2.png" class="tabber"></image>
+			<view>{{item.playTime}}</view>
+		</view>
+		<view class="d-f m-t-10 m-l-10" bindtap="video" data-item="{{item}}">
+			<image src="{{item.coverUrl}}" class="videos"></image>
+			<view class="video1 m-l-10">
+				<view>{{item.title}}</view>
+				<view class="d-f videos1 m-t-10">
+					<view>{{item.durationms}},</view>
+					<view>{{item.creator[0].userName}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexs==6}}">
+	<view wx:for="{{songa}}" wx:key="index">
+		<view class="d-f m-t-10">
+			<view class="m-l-10">
+				<view>{{item.name}}</view>
+				<view class="d-f songa m-t-10">
+					<view>{{item.artists[0].name}}</view>
+					<view>{{item.album.name}}</view>
+				</view>
+			</view>
+			<view class="d-f songa1">
+				<image src="../../images/tabber/视频播放.png" class="songa2"></image>
+				<image src="../../images/tabber/省略号.png" class="songa2 m-l-10"></image>
+			</view>
+		</view>
+		<!-- <view class="songa3">词:{{item.lyrics.txt}}</view> -->
+	</view>
+</view>
+<view wx:if="{{indexs==7}}">
+	<view class="m-l-10 m-t-10">电台</view>
+	<view wx:for="{{djRadios}}" wx:key="index" class="m-t-10">
+		<view class="d-f m-l-10 m-t-10">
+			<image src="{{item.picUrl}}" class="djRadios"></image>
+			<view class="m-l-10 m-t-10">
+				<view class="djRadios1">{{item.name}}</view>
+				<view class="m-t-10 songa">{{item.dj.nickname}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view wx:if="{{indexs==8}}">
+	<view wx:for="{{userprofiles}}" wx:key="index" class="m-t-10">
+		<view class="d-f m-l-10 m-t-10">
+			<image src="{{item.avatarUrl}}" class="userprofiles"></image>
+			<view>
+				<view class="d-f userprofiles2">
+					<view wx:if="{{index !==10}}">{{item.nickname}}</view>
+					<view wx:if="{{index ==10}}" class="userprofiles4">{{item.nickname}}</view>
+					<view wx:if="{{item.gender==undefined}}"></view>
+					<view wx:if="{{item.gender==1}}">
+						<image src="../../images/tabber/男.png" class="userprofiles1"></image>
+					</view>
+					<view wx:if="{{item.gender==2}}">
+						<image src="../../images/tabber/女生.png" class="userprofiles1"></image>
+					</view>
+				</view>
+				<view class="userprofiles3">{{item.signature}}</view>
+			</view>
+				<view class="user3">+ 关注</view>
+		</view>
+	</view>
+
+</view>

@@ -1,13 +1,57 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="d-f indexs">
+	<view class="index">音乐馆</view>
+	<van-search class="input" shape="round" background="white" placeholder="请输入搜索关键词" bind:focus="onSearch"/>
+	<image src="../../images/tabber/侧边栏_听歌识曲_44 (1).png" class="image"></image>
 </view>
+<view class="index2">
+	<swiper indicator-dots="{{true}}" indicator-active-color="#008000" autoplay="true" interval="{{2000}}" duration="{{500}}" circular="{{true}}" class="index3">
+		<swiper-item wx:for="{{banners}}" wx:key="index">
+			<image src="{{item.imageUrl}}" mode="witdFix" class="image2"></image>
+
+			<view class="index1" style="background:{{item.titleColor}}">{{item.typeTitle}}</view>
+		</swiper-item>
+	</swiper>
+</view>
+<view class="d-f j-c-s-a">
+	<view bindtap="recommend">
+		<view class="logo m-l-10">
+			<image src="../../images/tabber/日历.png" class="logo1"></image>
+		</view>
+		<view>每日推荐</view>
+	</view>
+	<view bindtap="sheet">
+		<view class="logo">
+			<image src="../../images/tabber/歌单.png" class="logo1"></image>
+		</view>
+		<view class="m-l-10">歌单</view>
+	</view>
+	<view>
+		<view class="logo" bindtap="ranking">
+			<image src="../../images/tabber/排行.png" class="logo1"></image>
+		</view>
+		<view>排行榜</view>
+	</view>
+	<view>
+		<view class="logo">
+			<image src="../../images/tabber/电台.png" class="logo1"></image>
+		</view>
+		<view class="m-l-10">电台</view>
+	</view>
+	<view>
+		<view class="logo">
+			<image src="../../images/tabber/直播.png" class="logo1"></image>
+		</view>
+		<view class="m-l-10">直播</view>
+	</view>
+</view>
+<!-- 发现好歌单 -->
+<sheet result="{{result}}"></sheet>
+<!-- 道不尽的华语深情 -->
+<newsong newsong="{{newsong}}" newsong1="{{newsong1}}" newsong2="{{newsong2}}"></newsong>
+<!-- 推荐电台 -->
+<radios radio="{{radio}}"></radios>
+<!-- 新歌 新碟 -->
+<dish dish="{{dish}}" dish1="{{dish1}}" dishs="{{dishs}}" dishs1="{{dishs1}}"></dish>
+<!-- 推荐节目 -->
+<program program="{{program}}"></program>
+<view class="indexa">人家也是有底线的呢!</view>

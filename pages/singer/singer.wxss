@@ -1,0 +1,63 @@
+.value {
+  width: 210rpx;
+  margin-left: 20rpx;
+}
+
+.color {
+  color: red;
+}
+
+.background {
+  background: red;
+  width: 130rpx;
+  height: 6rpx;
+  margin-left: -2rpx;
+  margin-top: 4rpx;
+}
+.zimu{
+  width: 50rpx;
+  margin-left: 20rpx;
+}
+.backgrounds{
+  background: rgb(255, 0, 183);
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.artists{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+}
+.artist2{
+  width: 35rpx;
+  height: 35rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  margin-top: 5rpx;
+margin-left: 10rpx;
+}
+.artist1{
+  width: 30rpx;
+  height: 30rpx;
+}
+.user3{
+  width: 130rpx;
+  height: 48rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  position: absolute;
+  right: 20rpx;
+  margin-top: 30rpx;
+}

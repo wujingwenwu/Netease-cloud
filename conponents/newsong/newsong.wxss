@@ -1,0 +1,69 @@
+.sheet{
+  width: 140rpx;
+  height: 50rpx;
+  border: 1rpx solid rgb(198, 195, 195);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+.sheet1{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+  
+}
+.sheet2{
+  margin-left: 30rpx;
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.png{
+  width: 25rpx;
+  height: 25rpx;
+}
+.newsong{
+  display: flex;
+}
+.picUrl{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.box{
+  display: flex;
+}
+.box1{
+  width: 1000rpx;
+}
+.box2{
+  margin-left: 30rpx;
+  width: 565rpx;
+  margin-top: 55rpx;
+  height: 100rpx;
+}
+.box3{
+  width: 230rpx;
+  margin-left: 100rpx;
+  font-size: 24rpx;
+}
+.box4{
+  width: 100rpx;
+  font-size: 24rpx;
+}
+.box5{
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  border: 1rpx solid rgb(199, 198, 198);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  width: 30rpx;
+  height: 26rpx;
+}

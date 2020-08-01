@@ -1,0 +1,63 @@
+<view class="conent" style="background:'')">
+	<view class="play">
+		<view class="play1">{{name}}</view>
+		<view class="play2">{{names}}</view>
+	</view>
+
+	<view class="play3">
+		<view wx:if="{{flags==true}}" bindtap="result">
+			<image src="../../images/tabber/song.png" class="image2"></image>
+			<image src="{{image}}" class="image1 {{flag==false?'active':''}}"></image>
+		</view>
+		<view wx:if="{{flags==false}}">
+			<scroll-view scroll-y="true" style="height: 636rpx;" scroll-into-view="{{toView}}" refresher-default-style="none" scroll-top="{{maginTop}}">
+
+				<view wx:for="{{lyricresults}}" wx:key="index">
+					<view bindtap="result" class="colorsr {{currentIndex==index?'colorq':''}}">{{item[1]}}</view>
+				</view>
+			</scroll-view>
+
+
+
+		</view>
+	</view>
+	<view class="play7">
+		<view class="d-f play5">
+			<view>
+				<image class="play4" src="../../images/tabber/心 实心.png" wx:if="{{number==0}}" bindtap="image" style="animation-play-state:{{flag==='false'?'running':'paused'}}"></image>
+				<image class="play4" src="../../images/tabber/心 实心 (1).png" wx:if="{{number==1}}" bindtap="image"></image>
+			</view>
+			<view>
+				<image class="play4" src="../../images/tabber/下载.png"></image>
+			</view>
+			<view>
+				<image class="play4" src="../../images/tabber/_唱歌.png"></image>
+			</view>
+			<view>
+				<image class="play4" src="../../images/tabber/消息.png"></image>
+			</view>
+			<view>
+				<image class="play4" src="../../images/tabber/竖点.png"></image>
+			</view>
+		</view>
+		<view class="section section_gap d-f">
+     <view class="section1">{{time}}</view>
+			<view class="body-view">
+				<slider bindchange="slider2change" block-size="18" max="{{duration}}" value="{{value}}"/>
+			</view>
+			<view class="section1">{{times}}</view>
+		</view>
+		<view class="d-f play5 title">
+			<image class="play4" src="../../images/tabber/循环.png" wx:if="{{num==0}}" bindtap="images"> </image>
+			<image class="play4" src="../../images/tabber/单曲循环.png" wx:if="{{num==1}}" bindtap="images"></image>
+			<image class="play4" src="../../images/tabber/随机.png" wx:if="{{num==2}}" bindtap="images"></image>
+			<image class="play4" src="../../images/tabber/上一首.png" bindtap="play"></image>
+			<view bindtap="tabber">
+				<image class="play6" src="../../images/tabber/播放4 (2).png" wx:if="{{flag==true}}"></image>
+				<image class="play6" src="../../images/tabber/播放4 (1).png" wx:if="{{flag==false}}"></image>
+			</view>
+			<image class="play4" src="../../images/tabber/下一首.png" bindtap="preaplay"></image>
+			<image class="play4" src="../../images/tabber/全部.png"></image>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,31 @@
+.image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.account{
+  justify-content: space-around;
+}
+.account1{
+  color: rgb(184, 180, 180);
+  margin-top: 10rpx;
+}
+.account2{
+  width: 180rpx;
+  height: 50rpx;
+  background: rgb(194, 193, 193);
+  color: white;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.image1{
+  width: 53rpx;
+  height: 40rpx;
+}
+.button{
+  margin-left: 200rpx;
+  margin-top: 300rpx;
+}

@@ -1,0 +1,17 @@
+<view class="sheet1">
+<view class="sheet2">推荐电台</view>
+<view class="sheet">查看更多</view>
+</view>
+<view class="radio">
+    <scroll-view scroll-x="true" style="height: 100%;" >
+    <view class="radio">
+          <view id="demo1" wx:for="{{radio}}" wx:key="index">
+          <image src="../../images/tabber/火.png" class="image"></image>
+          <view class="radio2">
+          <image src="{{item.picUrl}}" class="radio1"></image>
+          <view class="radio3">{{item.name}}</view>
+          </view>
+          </view>
+      </view>
+        </scroll-view>
+</view>
