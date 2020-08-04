@@ -211,4 +211,13 @@ export default {
   all() {
     return fly.get(`/mv/all`)
   },
+  //44.获取视频播放地址
+  videos(id) {
+    return fly.get(`/video/url?id=${id}`)
+  },
+   //45.获取全部视频列表
+   group() {
+    return fly.get(`/video/group/list`)
+  },
+
 }

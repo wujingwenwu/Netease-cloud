@@ -92,7 +92,7 @@
 <view class="hotAlbums2">mv</view>
 </view>
 <view wx:for="{{mvs}}" wx:key="index">
-<view class="d-f m-t-10 m-l-10">
+<view class="d-f m-t-10 m-l-10" bindtap="mv" data-item="{{item}}">
 <image src="{{item.imgurl}}" class="mvs"></image>
 <view>
 <view class="mvs1">{{item.name}}</view>

@@ -12,8 +12,8 @@ create.Page(store,{
   use:['userId'],
   data: {
     flag: true,
-    phone: '17311701400',
-    password: '1414727570',
+    phone: '',
+    password: '',
     passwords: '',
     email: '',
    

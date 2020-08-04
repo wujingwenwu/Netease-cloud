@@ -28,7 +28,7 @@ Page({
     arr:[],
     hotAlbums:[],
     mvs:[],
- 
+    flag:true
   },
   list(e){
   
@@ -37,7 +37,7 @@ Page({
   })
   },
   hotSongss(e){
-  console.log(e)
+  
   let id =e.currentTarget.dataset.item.id
   let image=e.currentTarget.dataset.item.al.picUrl
   let name=e.currentTarget.dataset.item.name
@@ -46,7 +46,16 @@ wx.navigateTo({
 url: `../play/play?id=${id}&name=${name}&names=${names}}`,
 });
 wx.setStorageSync('image', image)
- 
+wx.setStorageSync('idss', this.data.idss)
+  },
+  mv(e){
+    console.log(e)
+    let id =e.currentTarget.dataset.item.id
+    
+   
+    wx.navigateTo({
+      url: `../videos/videos?id=${id}&flag=${this.data.flag}`,
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -69,7 +78,10 @@ wx.setStorageSync('image', image)
        ids.names=item.ar[0].name
        ids.picUrl=item.al.picUrl
      idss.push(ids)
-      wx.setStorageSync('idss', idss)
+     this.setData({
+       idss:idss
+     })
+     
   
     })
     this.setData({
@@ -91,7 +103,7 @@ wx.setStorageSync('image', image)
       mvs:res.mvs
     })
    
-    // console.log(res)
+    console.log(res)
   }).catch(err=>{
     console.log(err)
   });

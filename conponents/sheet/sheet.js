@@ -23,9 +23,9 @@ Component({
   methods: {
     sheet(e){
      console.log(e)
-     let mvid = e.currentTarget.dataset.item.id
+     let id = e.currentTarget.dataset.item.id
      wx.navigateTo({
-       url: `../../pages/videos/videos?mvid=${mvid}`,
+       url: `../../pages/videos/videos?id=${id}`,
      })
     }
   }

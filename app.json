@@ -34,18 +34,7 @@
         "iconPath": "images/tabber/cloud.png",
         "selectedIconPath": "images/tabber/cloud1.png"
       },
-      {
-        "text": "视频",
-        "pagePath": "pages/video/video",
-        "iconPath": "images/tabber/plays1.png",
-        "selectedIconPath": "images/tabber/plays.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "pages/my/my",
-        "iconPath": "images/tabber/music.png",
-        "selectedIconPath": "images/tabber/music1.png"
-      },
+   
       {
         "text": "歌手",
         "pagePath": "pages/singer/singer",

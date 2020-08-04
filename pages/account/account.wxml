@@ -1,5 +1,5 @@
 <view class="d-f account">
-	<view class=" d-f" wx:if="{{$.userId !==''}}"  >
+	<view class=" d-f" wx:if="{{$.userId !==''}}">                                                                        !==''}}"  >
 		<image src="../../images/tabber/QQ图片20200720154723.jpg" class="image"></image>
 		<view class="m-l-10 account1">
 			<view>{{user.nickname}}</view>

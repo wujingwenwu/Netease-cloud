@@ -1,2 +1,17 @@
-<!--pages/videos/videos.wxml-->
-<text>pages/videos/videos.wxml</text>
+<view>
+   <video 
+      id="myVideo" 
+      src="{{video}}" 
+      binderror="videoErrorCallback" 
+      danmu-list="{{danmuList}}" 
+      enable-danmu 
+      danmu-btn="true" 
+      show-center-play-btn='{{true}}' 
+      show-play-btn="{{true}}" 
+      controls
+      picture-in-picture-mode="{{['push', 'pop']}}"
+      bindenterpictureinpicture='bindVideoEnterPictureInPicture'
+      bindleavepictureinpicture='bindVideoLeavePictureInPicture'
+    ></video>
+
+</view>

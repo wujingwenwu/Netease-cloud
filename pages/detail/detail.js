@@ -62,14 +62,24 @@ Page({
   albums:[],
   videos:[],
   userprofiles:[],
+  flag:true,
+  idss:[]
   },
   //播放视频
   video(e){
    console.log(e)
-   let mvid = e.currentTarget.dataset.item.vid
-   wx.navigateTo({
-     url: `../videos/videos?mvid=${mvid}`,
-   })
+   let id = e.currentTarget.dataset.item.vid
+   let type = e.currentTarget.dataset.item.type
+   if(type==1){
+    wx.navigateTo({
+      url: `../videos/videos?id=${id}`,
+    })
+  }else{
+    wx.navigateTo({
+      url: `../videos/videos?id=${id}&flag=${this.data.flag}`,
+    })
+  }
+  
   },
   focus(){
     wx.navigateTo({
@@ -116,6 +126,7 @@ wx.navigateTo({
  url: `../play/play?id=${id}&name=${name}&names=${names}`,
 });
 wx.setStorageSync('image', image)
+wx.setStorageSync('idss', this.data.idss)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -155,7 +166,19 @@ wx.setStorageSync('image', image)
       album:res.result.album,
       user:res.result.user,
     })
-    // console.log(this.data.mlog)
+    res.result.song.songs.map(item=>{
+      let ids={}
+      let idss=[]
+      ids.id=item.id
+      ids.name=item.name
+      ids.names=item.ar[0].name
+      ids.picUrl=item.al.picUrl
+    idss.push(ids)
+    this.setData({
+      idss:idss
+    })
+    })
+    console.log(this.data.song)
     // console.log(this.data.user)
     // console.log(res)
   }).catch(err=>{
@@ -225,7 +248,7 @@ wx.setStorageSync('image', image)
     this.setData({
       videos:res.result.videos
     })
-    // console.log(res)
+    console.log(res)
     console.log(this.data.videos)
   }).catch(err=>{
     console.log(err)

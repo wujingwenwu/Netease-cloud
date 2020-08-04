@@ -7,24 +7,68 @@ Page({
    * 页面的初始数据
    */
   data: {
-    mvid:''
+    id:'',
+    src: '',
+    danmuList:
+    [{
+      text: '看这个视频的一定很帅',
+      color: '#ff0000',
+      time: 1
+    }, {
+      text: '哎呦！你很帅额',
+      color: '#ff00ff',
+      time: 3
+    }],
+    flag:''
   },
  getData(){
-  api.mvid({mvid:this.data.mvid,type:1004}).then(res=>{
-    console.log(res)
-  }).catch(err=>{
-    console.log(err)
-  })
+   if(this.data.flag !==undefined){
+    api.mvids(this.data.id).then(res=>{
+      this.setData({
+        video:res.data.url
+      })
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+   }else{
+    api.videos(this.data.id).then(res=>{
+      this.setData({
+        video:res.urls[0].url
+      })
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+   }
+ 
  },
+
+ onShareAppMessage() {
+  return {
+    title: 'video',
+    path: 'page/component/pages/video/video'
+  }
+},
+
+onReady() {
+  this.videoContext = wx.createVideoContext('myVideo')
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     console.log(options.mvid)
+     console.log(options.id)
+    
+     console.log(options.flag)
      this.setData({
-       mvid:options.mvid
+       id:options.id,
+    
+       flag:options.flag
      })
+     console.log(this.data.flag)
      this.getData()
+     
   },
 
   /**
